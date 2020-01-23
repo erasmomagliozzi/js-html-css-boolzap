@@ -27,5 +27,21 @@ header {
    height: 100%;
  }
  .il-mio-profilo{
-
+   height: 75px;
+   background-color: lightgrey;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
  }
+  .il-mio-profilo img{
+    border-radius: 100%;
+    width: 50px;
+    margin: 10px;
+  }
+  .icon-profile .fa-circle-notch,
+  .fa-comment-alt,
+  .fa-ellipsis-v{
+    font-size: 25px;
+    margin: 10px;
+    color: grey;
+  }
