@@ -3,3 +3,29 @@
   padding : 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #d3d3d3;
+  position: relative;
+}
+header {
+  height: 125px;
+  background-color: #1abc9c;
+  z-index: 0;
+}
+.wrapper {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  min-width: 80%;
+  height: 95vh;
+  background-color: red;
+ }
+ .side-name {
+   background-color: blue;
+   width: 35%;
+   height: 100%;
+ }
+ .il-mio-profilo{
+
+ }
