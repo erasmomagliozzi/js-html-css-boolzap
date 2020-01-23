@@ -7,6 +7,7 @@
 body {
   background-color: #d3d3d3;
   position: relative;
+  font-family: 'Raleway', sans-serif;
 }
 header {
   height: 125px;
@@ -21,11 +22,13 @@ header {
   height: 95vh;
   background-color: red;
  }
+ /* SEZIONE SINISTRA */
  .side-name {
    background-color: blue;
    width: 35%;
    height: 100%;
  }
+ /* PRIMA SEZIONE PROFILO UTENTE */
  .il-mio-profilo{
    height: 75px;
    background-color: lightgrey;
@@ -45,3 +48,60 @@ header {
     margin: 10px;
     color: grey;
   }
+  /* ---SEZIONE NOTIFICA */
+  .notification {
+    height: 75px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+  }
+  .fa-bell-slash{
+    font-size: 25px;
+    color:skyblue;
+  }
+  .div-bell{
+    background-color: white;
+    width: 50px;
+    height: 45px;
+    padding: 10px;
+    margin:0 25px;
+    border-radius: 100%;
+  }
+  .text-notification h3{
+    font-size: 15px;
+  }
+  .text-notification h4{
+    font-size: 15px;
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  /* INPUT CERCA */
+  .input{
+    height: 40px;
+    background-color: green;
+    position: relative;
+
+
+  }
+  .input input{
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+  }
+  /* #cerca {
+    background-image: url('../img/search.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    padding: 10px;
+    align-items: center;
+  } */
+/* CONTATTI */
+.contatti{
+  background-color: pink;
+  height:90vh;
+}
