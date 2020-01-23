@@ -126,6 +126,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   }
+  /* NAVBAR SUPERIORE */
 .navbar-contatto-selezionato{
   width: 100%;
   height: 75px;
@@ -161,6 +162,7 @@ header {
 .contatto-side-message h5{
   color: grey;
 }
+/* NAVBAR INFERIORE */
 .navbar-text-message{
   width: 100%;
   height: 75px;
@@ -181,4 +183,30 @@ header {
 .navbar-text-message input{
   width: 80%;
   height: 70%;
+  border-radius: 5px;
+  border: 0;
+}
+/* MESSAGGI */
+.spazio-messaggi{
+  display: flex;
+  justify-content:
+}
+.messaggio-utente{
+  background-color: red;
+  width:50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.messaggio-computer{
+  background-color: blue;
+  width:50%;
+  height: 100%;
+}
+.mex-user{
+  width: 100px;
+  height:50px;
+  background-color:#bdf2ae;
+  border-radius: 8px;
+  margin: 15px;
 }
