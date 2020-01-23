@@ -19,12 +19,11 @@ header {
   top: 15%;
   left: 10%;
   min-width: 80%;
-  height: 95vh;
-  background-color: red;
+  /* background-color: red; */
+  display: flex;
  }
  /* SEZIONE SINISTRA */
  .side-name {
-   background-color: blue;
    width: 35%;
    height: 100%;
  }
@@ -43,7 +42,9 @@ header {
   }
   .icon-profile .fa-circle-notch,
   .fa-comment-alt,
-  .fa-ellipsis-v{
+  .fa-ellipsis-v,
+  .fa-search,
+  .fa-paperclip{
     font-size: 25px;
     margin: 10px;
     color: grey;
@@ -102,6 +103,53 @@ header {
   } */
 /* CONTATTI */
 .contatti{
-  background-color: pink;
-  height:90vh;
+  min-height: 700px;
+  background-color: #f4f2f2;
+  overflow-y: scroll;
+}
+.mex-contatto{
+  display: flex;
+  align-items: center;
+}
+.mex-contatto img{
+  height: 65px;
+  border-radius: 100%;
+  margin: 10px;
+}
+.anteprima-mex h4{
+  margin-top: 5px;
+  color: grey;
+}
+/* --------------FINE PARTE CONTATTI */
+/* ---------------INIZIO PARTE MESSAGGIO */
+.side-message{
+  width: 65%;
+  min-height: 700px;
+  background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+}
+.navbar-contatto-selezionato{
+  width: 100%;
+  height: 75px;
+  background-color: lightgrey;
+  border-left: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-contatto-selezionato img{
+  border-radius: 100%;
+  width: 50px;
+  margin: 30px;
+}
+.contatto-side-message{
+  display: flex;
+  align-items: center;
+}
+.contatto-side-message p{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.contatto-side-message h5{
+  color: grey;
 }
