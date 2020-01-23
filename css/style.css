@@ -19,7 +19,6 @@ header {
   top: 15%;
   left: 10%;
   min-width: 80%;
-  /* background-color: red; */
   display: flex;
  }
  /* SEZIONE SINISTRA */
@@ -30,7 +29,7 @@ header {
  /* PRIMA SEZIONE PROFILO UTENTE */
  .il-mio-profilo{
    height: 75px;
-   background-color: lightgrey;
+   background-color: #e5e3e3;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -80,10 +79,8 @@ header {
   /* INPUT CERCA */
   .input{
     height: 40px;
-    background-color: green;
     position: relative;
-
-
+    background-color: #f4f2f2;
   }
   .input input{
     width: 95%;
@@ -125,21 +122,32 @@ header {
 .side-message{
   width: 65%;
   min-height: 700px;
-  background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
-}
+
+  display: flex;
+  flex-wrap: wrap;
+  }
 .navbar-contatto-selezionato{
   width: 100%;
   height: 75px;
-  background-color: lightgrey;
+  background-color: #e5e3e3;
   border-left: 1px solid grey;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 .navbar-contatto-selezionato img{
   border-radius: 100%;
   width: 50px;
   margin: 30px;
+}
+.spazio-messaggi{
+  top:75px;
+  bottom:75px;
+  height: 740px;
+  width: 100%;
+  background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+
 }
 .contatto-side-message{
   display: flex;
@@ -152,4 +160,25 @@ header {
 }
 .contatto-side-message h5{
   color: grey;
+}
+.navbar-text-message{
+  width: 100%;
+  height: 75px;
+  background-color: #e5e3e3;
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-text-message .fa-smile,
+.navbar-text-message .fa-telegram-plane{
+  font-size: 40px;
+  color: grey;
+  padding: 15px;
+
+}
+.navbar-text-message input{
+  width: 80%;
+  height: 70%;
 }
