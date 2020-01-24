@@ -33,7 +33,10 @@
         </div>
         <!-- INPUT CERCA -->
         <div class="input">
-          <input type="text" id='cerca' placeholder="        Cerca o inizia una nuova chat"/>
+          <div class="wrapper-input">
+            <i class="fas fa-search"></i>
+            <input type="text" id='cerca' placeholder="Cerca o inizia una nuova chat"/>
+          </div>
         </div>
         <!-- CONTATTI -->
         <div class="contatti">
@@ -97,7 +100,7 @@
             <img src="img/colorful-vector-avatars-tre-uomo.jpg" alt="">
             <div>
               <p>Pasquale</p>
-              <h5>ultimo accesso oggi alle </h5>
+              <h5>ultimo accesso oggi alle 15.40</h5>
             </div>
           </div>
           <div class="icon-profile">
@@ -107,29 +110,49 @@
           </div>
         </div>
         <!-- MESSAGGI -->
-        <div class="spazio-messaggi">
-          <div class="messaggio-computer">
-
+        <!-- MESSAGGI UTENTE -->
+        <div class="spazio-messaggi active">
+          <div class="messaggio computer">
+            <div class="message-top">
+            <p class="message-text">Ciao come stai?</p>
+            <i class="fa fa-chevron-down f-right message-options"></i>
           </div>
-          <div class="messaggio-utente ">
-            <div class="input_message ">
-              <p>
-
-              </p>
+          <div class="message-bottom">
+            <small class="message-time">10:40</small>
+          </div>
+         <!-- MESSAGGI COMPUTER -->
+          </div>
+          <div class="messaggio utente ">
+            <div class="message-top">
+             <p class="message-text">Ciao come stai?</p>
+             <i class="fa fa-chevron-down f-right message-options"></i>
             </div>
-
+            <div class="message-bottom">
+             <small class="message-time">10:40</small>
+            </div>
           </div>
-
         </div>
         <!-- NAVBAR INFERIORE -->
         <div class="navbar-text-message">
           <i class="far fa-smile"></i>
-          <input type="text" name="" value="" placeholder="  Scrivi un messaggio">
-          <i class="fab fa-telegram-plane"></i>
+          <input type="text" class="send-message"name="" value="" placeholder="  Scrivi un messaggio">
+          <i class="fab fa-telegram-plane icon-send"></i>
 
         </div>
       </div>
     </div>
+    <!-- TEMPLATE -->
+    <div class="template">
+     <div class="messaggio">
+      <div class="message-top">
+        <p class="message-text"></p>
+        <i class="fa fa-chevron-down f-right message-options"></i>
+      </div>
+      <div class="message-bottom">
+        <small class="message-time"></small>
+      </div>
+    </div>
+  </div>
 
 
   <script src="js/script.js" charset="utf-8"></script>

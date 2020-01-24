@@ -8,6 +8,9 @@ body {
   background-color: #d3d3d3;
   position: relative;
   font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 100vh;
+  min-width: 900px;
 }
 header {
   height: 125px;
@@ -18,7 +21,8 @@ header {
   position: absolute;
   top: 15%;
   left: 10%;
-  min-width: 80%;
+  width: 80%;
+  height: 90%;
   display: flex;
  }
  /* SEZIONE SINISTRA */
@@ -83,16 +87,22 @@ header {
     background-color: #f4f2f2;
   }
   .input input{
-    width: 95%;
+    width: 80%;
     height: 90%;
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
+    border: 0;
+  }
+  .wrapper-input{
+    background-color: white;
+    width: 85%;
+    height: 90%;
 
   }
   /* #cerca {
-    background-image: url('../img/search.png');
+    backgrounsd-image: url('../img/search.png');
     background-size: 30px;
     background-repeat: no-repeat;
     padding: 10px;
@@ -100,7 +110,7 @@ header {
   } */
 /* CONTATTI */
 .contatti{
-  min-height: 700px;
+  height: calc(100% - 190px);
   background-color: #f4f2f2;
   overflow-y: scroll;
 }
@@ -121,7 +131,7 @@ header {
 /* ---------------INIZIO PARTE MESSAGGIO */
 .side-message{
   width: 65%;
-  min-height: 700px;
+  height: 100%;
 
   display: flex;
   flex-wrap: wrap;
@@ -145,7 +155,7 @@ header {
 .spazio-messaggi{
   top:75px;
   bottom:75px;
-  height: 740px;
+  height: calc(100% - 150px);
   width: 100%;
   background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
 
@@ -189,24 +199,32 @@ header {
 /* MESSAGGI */
 .spazio-messaggi{
   display: flex;
-  justify-content:
+  overflow-y: scroll;
+
+}.utente{
+  float: right;
+  clear: both;
+  background-color: #bdf2ae;
 }
-.messaggio-utente{
-  background-color: red;
-  width:50%;
-  height: 100%;
+.computer{
+  float: left;
+  clear: both;
+  background: white;
+}
+.message-top {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
-.messaggio-computer{
-  background-color: blue;
-  width:50%;
-  height: 100%;
+.message-bottom {
+  text-align: right;
 }
-.mex-user{
-  width: 100px;
-  height:50px;
-  background-color:#bdf2ae;
-  border-radius: 8px;
-  margin: 15px;
+.messaggio {
+  min-width: 30%;
+  max-width: 60%;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.spazio-messaggi.active {
+  display: block;
 }
