@@ -117,6 +117,7 @@ header {
 .mex-contatto{
   display: flex;
   align-items: center;
+  position: relative;
 }
 .mex-contatto img{
   height: 65px;
@@ -227,4 +228,13 @@ header {
 }
 .spazio-messaggi.active {
   display: block;
+}
+.none {
+  display: none;
+}
+.contact_message-bottom{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 5px;
 }
