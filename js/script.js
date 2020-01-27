@@ -8,12 +8,7 @@ $(document).ready(
      });
 
      time();
-     $('.message-options').click(
-       function() {
-         console.log('aaa');
-         
-
-       });
+     clickOnContact();
 
 
 
@@ -90,27 +85,27 @@ function searchContact(){
     });
 }
 // QUANDO CLICCO SU UN MEX-CONTATTO, SI DEVE APRIRE SPAZIO-MESSAGGI CHE GLI APPARTIENE
-// function clickOnContact(){
-//   $('.spazio-messaggi').each(function(){
-//     var valAttrSpazio = $(this).attr('data-contact');
-//     console.log(valAttrSpazio);
-//
-//       $('.mex-contatto').click(
-//           function(){
-//            var valAttr = $(this).attr('data-contact');
-//            console.log(valAttr);
-//
-//            if(valAttr == valAttrSpazio){
-//           alert('uguale');
-//           $('.spazio-messaggi').show();
-//       }
-//     });
-//   })
-// }
+function clickOnContact(){
+  $('.spazio-messaggi').each(function(){
+    var valAttrSpazio = $(this).attr('data-contact');
+    console.log(valAttrSpazio);
+
+      $('.mex-contatto').click(
+          function(){
+           var valAttr = $(this).attr('data-contact');
+           console.log(valAttr);
+
+           if(valAttr == valAttrSpazio){
+          alert('uguale');
+          $('.spazio-messaggi').show();
+      }
+    });
+  })
+}
 
   //     // se data contact del contatto è uguale al data contatto dello spazio-messaggio, mi apri il suo spazio-messaggi,senno vai avanti fino a quando non lo incontri e me lo apri
-function tendaOpzioni(){
-   $('.spazio-messaggio').find('.messaggio').addClass('.options')
-
-}
+// function tendaOpzioni(){
+//    $('.spazio-messaggio').find('.messaggio').addClass('.options')
+//
+// }
 });
