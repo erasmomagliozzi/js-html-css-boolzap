@@ -160,8 +160,13 @@ header {
   height: calc(100% - 150px);
   width: 100%;
   background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
-
+  overflow-y: scroll;
+  display: none;
 }
+.spazio-messaggi.active {
+  display: block;
+}
+
 .contatto-side-message{
   display: flex;
   align-items: center;
@@ -190,8 +195,11 @@ header {
   font-size: 40px;
   color: grey;
   padding: 15px;
-
 }
+.fa-telegram-plane:hover{
+  color: green;
+}
+.fa-smile:hover{color: #fcb400;}
 .navbar-text-message input{
   width: 80%;
   height: 70%;
@@ -199,13 +207,6 @@ header {
   border: 0;
 }
 /* MESSAGGI */
-.spazio-messaggi{
-  display: flex;
-  overflow-y: scroll;
-}
-.spazio-messaggi.active {
-  display: block;
-}
 .utente{
   float: right;
   clear: both;
