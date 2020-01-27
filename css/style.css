@@ -101,13 +101,7 @@ header {
     height: 90%;
 
   }
-  /* #cerca {
-    backgrounsd-image: url('../img/search.png');
-    background-size: 30px;
-    background-repeat: no-repeat;
-    padding: 10px;
-    align-items: center;
-  } */
+
 /* CONTATTI */
 .contatti{
   height: calc(100% - 190px);
@@ -118,6 +112,13 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+}
+.mex-contatto:hover{
+  background-color: grey;
+  cursor: pointer;
+}
+.mex-contatto:hover .anteprima-mex h4{
+  color: white;
 }
 .mex-contatto img{
   height: 65px;
@@ -201,8 +202,11 @@ header {
 .spazio-messaggi{
   display: flex;
   overflow-y: scroll;
-
-}.utente{
+}
+.spazio-messaggi.active {
+  display: block;
+}
+.utente{
   float: right;
   clear: both;
   background-color: #bdf2ae;
@@ -225,9 +229,6 @@ header {
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
-}
-.spazio-messaggi.active {
-  display: block;
 }
 .none {
   display: none;

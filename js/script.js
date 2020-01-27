@@ -4,13 +4,9 @@ $(document).ready(
    $('.icon-send').click(
      function() {
        inviaMessaggio();
-       pcMessage();
+       setTimeout(pcMessage,1000);
      });
-   // $('.search').click(
-   //   function(){
-   //     searchContact(contatti);
-   //   }
-   // )
+     searchContact();
      time();
 
 
@@ -42,7 +38,7 @@ function addZero(number) {
   }
   return number;
 }
-
+// FUNZIONE RISPOSTA DA COMPUTER
 function pcMessage(){
   var messaggioComputer = $('.template .messaggio').clone();
   console.log(messaggioComputer);
@@ -59,18 +55,7 @@ function pcMessage(){
   messaggioComputer.find('.message-time').text(time);
 }
 
-// function searchContact(arrayName){
-//
-//   var cerca = $('input.cerca').val();
-//   console.log(cerca);
-//
-//   for(var i = 0; i < arrayName.length; i++ ){
-//     if(arrayName.includes(cerca) == false){
-//       $('mex-contatto').addClass('none');
-//     }
-//   }
-// }
-
+// FUNZIONE ORARIO ESATTO
 function time(){
   var data = new Date();
   var hours = addZero(data.getHours());
@@ -79,11 +64,21 @@ function time(){
 
   $('.mex-contatto').find('.contact_message-bottom small').html(time);
 }
+// FUNZIONE CERCA CONTATTO
+function searchContact(){
+  $('.input input').keyup(
+    function(){
+      var testoCerca = $('.input input').val().toLowerCase();
 
+      $('.contatti .mex-contatto').each(
+        function(){
+          var nomeContatto = $(this).find('.nome_contatto').text().toLowerCase();
+          if(nomeContatto.includes(testoCerca) == true){
+            $(this).show()
+          }else{
+            $(this).hide()
+          }
+        });
+    });
+}
   });
-// var contatti = [];
-//  for (var j = 0; j < 7; j++){
-//  var cont = $('.anteprima-mex h3').text();
-// contatti.push(cont);
-// }
-// console.log(contatti);
