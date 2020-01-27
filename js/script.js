@@ -6,14 +6,16 @@ $(document).ready(
        inviaMessaggio();
        setTimeout(pcMessage,1000);
      });
-     searchContact();
-     time();
 
-     $(document).on("click", ".mex-contact",
-     function() {
-        clickOnContact(this);
-     }
- );
+     time();
+     $('.message-options').click(
+       function() {
+         console.log('aaa');
+         
+
+       });
+
+
 
 
      // FUNZIONE INVIA MESSAGGIO
@@ -107,5 +109,8 @@ function searchContact(){
 // }
 
   //     // se data contact del contatto è uguale al data contatto dello spazio-messaggio, mi apri il suo spazio-messaggi,senno vai avanti fino a quando non lo incontri e me lo apri
+function tendaOpzioni(){
+   $('.spazio-messaggio').find('.messaggio').addClass('.options')
 
+}
 });
