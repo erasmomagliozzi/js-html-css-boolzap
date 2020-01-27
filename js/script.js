@@ -3,18 +3,20 @@ $(document).ready(
 
    $('.icon-send').click(
      function() {
+       time();
        inviaMessaggio();
        setTimeout(pcMessage,1000);
      });
 
-     time();
+     searchContact();
      clickOnContact();
 
 
 
 
+     function inviaMessaggio(){
      // FUNZIONE INVIA MESSAGGIO
- function inviaMessaggio(){
+
    var textMessage = $('input.send-message').val();
 
    if(textMessage.length != 0) {
@@ -66,6 +68,7 @@ function time(){
   var time = hours +':'+ minutes;
 
   $('.mex-contatto').find('.contact_message-bottom small').html(time);
+
 }
 // FUNZIONE CERCA CONTATTO
 function searchContact(){
@@ -86,21 +89,14 @@ function searchContact(){
 }
 // QUANDO CLICCO SU UN MEX-CONTATTO, SI DEVE APRIRE SPAZIO-MESSAGGI CHE GLI APPARTIENE
 function clickOnContact(){
-  $('.spazio-messaggi').each(function(){
-    var valAttrSpazio = $(this).attr('data-contact');
-    console.log(valAttrSpazio);
-
-      $('.mex-contatto').click(
-          function(){
-           var valAttr = $(this).attr('data-contact');
-           console.log(valAttr);
-
-           if(valAttr == valAttrSpazio){
-          alert('uguale');
-          $('.spazio-messaggi').show();
-      }
+  $('.mex-contatto').click(
+    function(){
+      var valAttr = $(this).attr('data-contact');
+      var dataContact = '[data-contact = "'+valAttr+'"]';
+      $('.spazio-messaggi').removeClass('active')
+      $('.spazio-messaggi'+ dataContact ).addClass('active');
     });
-  })
+
 }
 
   //     // se data contact del contatto è uguale al data contatto dello spazio-messaggio, mi apri il suo spazio-messaggi,senno vai avanti fino a quando non lo incontri e me lo apri
