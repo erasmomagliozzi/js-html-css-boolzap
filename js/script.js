@@ -43,6 +43,8 @@ $(document).ready(
 
 
 
+
+
 // -------FUNZIONI
    function inviaMessaggio(){
      // FUNZIONE INVIA MESSAGGIO
@@ -54,6 +56,7 @@ $(document).ready(
     console.log(newMessage);
 
     newMessage.find('.message-text').text(textMessage);
+    
     var data = new Date();
     var hours = addZero(data.getHours());
     var minutes = addZero(data.getMinutes());
@@ -62,6 +65,7 @@ $(document).ready(
     newMessage.find('.message-time').text(time);
     newMessage.addClass('utente');
     $('.spazio-messaggi').append(newMessage);
+
 
     $('input.send-message').val('');
  }
