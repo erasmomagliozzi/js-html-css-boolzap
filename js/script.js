@@ -35,8 +35,11 @@ $(document).ready(
 
         $(this).parents('.template').siblings('.messaggio').find('.message-link').removeClass('active');
       });
+   $(document).on('click', '.message-delete', function(){
+       $(this).parent().parent().parent().addClass('none');
 
-   
+   });
+
 
 
 

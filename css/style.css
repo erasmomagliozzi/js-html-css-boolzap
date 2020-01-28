@@ -267,3 +267,7 @@ header {
 .messaggio .message-options {
   display: none;
 }
+.message-delete:hover,
+.message-delete:active{
+  cursor: pointer;
+}
