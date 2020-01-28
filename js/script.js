@@ -32,21 +32,15 @@ $(document).ready(
     $(document).on('click', '.message-options', function() {
 
         $(this).parent().siblings('.message-link').toggleClass('active');
-      
+
         $(this).parents('.template').siblings('.messaggio').find('.message-link').removeClass('active');
       });
+
+   
 
 
 
 // -------FUNZIONI
-  // function clickContact() {
-  //   $('.mex-contatti').click(function(){
-  //     var valAttr = $(this).attr('data-contact');
-  //     console.log(valAttr);
-  //   });
-  //
-  // }
-
    function inviaMessaggio(){
      // FUNZIONE INVIA MESSAGGIO
 

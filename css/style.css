@@ -129,12 +129,17 @@ header {
   margin-top: 5px;
   color: grey;
 }
+.contact_message-bottom{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 5px;
+}
 /* --------------FINE PARTE CONTATTI */
 /* ---------------INIZIO PARTE MESSAGGIO */
 .side-message{
   width: 65%;
   height: 100%;
-
   display: flex;
   flex-wrap: wrap;
   }
@@ -230,25 +235,21 @@ header {
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
+  position: relative;
 }
 .none {
   display: none;
 }
-.contact_message-bottom{
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 5px;
-}
 /* TENDINA */
+
 .message-link {
-  display: none;
   position: absolute;
-  top: 125px;
+  top: 45px;
   right: 25px;
   padding: 10px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
   background: white;
+  display: none;
 }
 .message-link.active {
   display: block;
