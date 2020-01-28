@@ -240,26 +240,29 @@ header {
   right: 0;
   margin-top: 5px;
 }
-/* OPTIONS */
-.messaggio.utente,
-.messaggio.computer{
-  position: relative;
-}
-.options{
-  z-index: 100;
-  width: 200px;
-  height: 75px;
-  background-color: white;
-  color: grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translateX(-50%);
+/* TENDINA */
+.message-link {
   display: none;
+  position: absolute;
+  top: 125px;
+  right: 25px;
+  padding: 10px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  background: white;
 }
-.options li{
-  margin: 5px;
+.message-link.active {
+  display: block;
+}
+.message-link ul {
+  list-style:none;
+}
+
+.messaggio:hover .message-options,
+.messaggio:active .message-options,
+.messaggio:focus .message-options{
+  display: block;
+  cursor: pointer;
+}
+.messaggio .message-options {
+  display: none;
 }

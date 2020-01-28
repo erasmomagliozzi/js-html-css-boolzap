@@ -3,18 +3,51 @@ $(document).ready(
 
    $('.icon-send').click(
      function() {
-       time();
        inviaMessaggio();
        setTimeout(pcMessage,1000);
      });
 
+     time();
      searchContact();
-     clickOnContact();
+
+     $(document).on('click', '.mex-contatto', function (){
+
+           var valAttr = $(this).attr('data-contact');
+           console.log(valAttr);
+           var dataContact = '.spazio-messaggi[data-contact = "'+ valAttr +'"]';
+
+           $('.spazio-messaggi').removeClass('active');
+           $(dataContact).addClass('active');
+           $('.mex-contatto').removeClass('active');
+           $(this).addClass('active');
+
+           var name = $(this).find('.nome_contatto').text();
+           var img = $(this).find('img').attr('src');
+           $('.side-message .navbar-contatto-selezionato .contatto-side-message .contact-name p').text(name);
+           $('.side-message .navbar-contatto-selezionato .contatto-side-message img').attr('src', img);
+
+
+     });
+
+    $(document).on('click', '.message-options', function() {
+
+        $(this).parent().siblings('.message-link').toggleClass('active');
+      
+        $(this).parents('.template').siblings('.messaggio').find('.message-link').removeClass('active');
+      });
 
 
 
+// -------FUNZIONI
+  // function clickContact() {
+  //   $('.mex-contatti').click(function(){
+  //     var valAttr = $(this).attr('data-contact');
+  //     console.log(valAttr);
+  //   });
+  //
+  // }
 
-     function inviaMessaggio(){
+   function inviaMessaggio(){
      // FUNZIONE INVIA MESSAGGIO
 
    var textMessage = $('input.send-message').val();
@@ -67,8 +100,8 @@ function time(){
   var minutes = addZero(data.getMinutes());
   var time = hours +':'+ minutes;
 
-  $('.mex-contatto').find('.contact_message-bottom small').html(time);
-
+  // $('.mex-contatto').find('.contact_message-bottom small').html(time);
+  $('.template').find('.message-bottom small').html(time);
 }
 // FUNZIONE CERCA CONTATTO
 function searchContact(){
@@ -87,21 +120,5 @@ function searchContact(){
         });
     });
 }
-// QUANDO CLICCO SU UN MEX-CONTATTO, SI DEVE APRIRE SPAZIO-MESSAGGI CHE GLI APPARTIENE
-function clickOnContact(){
-  $('.mex-contatto').click(
-    function(){
-      var valAttr = $(this).attr('data-contact');
-      var dataContact = '[data-contact = "'+valAttr+'"]';
-      $('.spazio-messaggi').removeClass('active')
-      $('.spazio-messaggi'+ dataContact ).addClass('active');
-    });
 
-}
-
-  //     // se data contact del contatto è uguale al data contatto dello spazio-messaggio, mi apri il suo spazio-messaggi,senno vai avanti fino a quando non lo incontri e me lo apri
-// function tendaOpzioni(){
-//    $('.spazio-messaggio').find('.messaggio').addClass('.options')
-//
-// }
 });
